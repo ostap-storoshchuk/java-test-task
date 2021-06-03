@@ -43,7 +43,7 @@ Technical task itself consists of three main parts:
  2. Quality and style of the code
  3. Ability to learn fast new technologies
  4. Nice to have: all possible exception situations are handled properly
- 5. Try to cover yout code with Unit tests(Optional)
+ 5. Try to cover your code with Unit tests(Optional)
 
 ## 🏁 Finishing the task
 After everything is done, please commit and send a link to your GitHub repository to HR.
