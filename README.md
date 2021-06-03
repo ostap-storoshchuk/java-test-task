@@ -9,7 +9,7 @@ P.S. If you have any questions 🤔 or just want to chat 💬, please email me a
 
 P.S.S. I bet that you could do it with your eyes shut and there is literally nothing that could stop you.
 ## 📃 Task
-Your goal for the task is to show us as much as you know about Java (Spring) and Beck-End development. The app should be not overcomplicated and you have to remember it's not 🚀 rocket science, so do not overload everything.
+Your goal for the task is to show us as much as you know about Java (Spring) and Back-End development. The app should be not overcomplicated and you have to remember it's not 🚀 rocket science, so do not overload everything.
 
 Our (ORIL) goal for the task is to see how deeply you understand the technology and figure out how you find solutions in different situations.
 
