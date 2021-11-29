@@ -15,25 +15,25 @@ Our (ORIL) goal for the task is to see how deeply you understand the technology 
 
 For the test task, you have to create your own GitHub repository.
 
-DEADLINE: 3-5 days.
+DEADLINE: 1-3 days.
 
 ### Technical requirements
 - Java 8+
 - String Boot, Spring Data.
-- MongoDB.
+- MongoDB / MySQL / PostgreSQL.
 
 
-Technical task itself consists of three main parts: 
-1. Timer.\
-   You need to create a cron job timer that runs every 10 seconds and pulls cryptocurrency last prices from [CEX.IO.](https://cex.io/rest-api) Hint: use endpoint that returns last price of selected pair. For this task you should pull last prices for the following pairs: BTC/USD, ETH/USD and XRP/USD. This data should be stored in database, since you will use this data in the next two parts of the task. Feel free to store any additional information to database like ‘createdAt’ date etc.
+Technical task itself consists of two main parts and one optional: 
+1. Collect data.\
+   You need to fetch cryptocurrency data prices from CEX.IO. Hint: use endpoint that returns last price of selected pair [CEX.IO](https://cex.io/rest-api#last-price) and you can use RestTemplate for this purpose [Spring doc](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html). For this task you should pull last prices for the following pairs: BTC/USD, ETH/USD and XRP/USD. This data should be stored in database, since you will use this data in this data should be stored in database, since you will use this data in the next two parts of the task. Feel free to store any additional information to database like ‘createdAt’ date etc.
 2. Rest Endpoints.\
    You need to create a rest controller with the following endpoints 
      -  GET ```/cryptocurrencies/minprice?name=[currency_name]``` - should return record with the lowest price of selected cryptocurrency.
      -  GET ```/cryptocurrencies/maxprice?name=[currency_name]``` - should return record with the highest price of selected cryptocurrency
 [currency_name] possible values: BTC, ETH or XRP. If some other value is provided then appropriate error message should be thrown.
-     -  GET ```/cryptocurrencies?name=[currency_name]&page=[page_number]&size=[page_size]``` - should return a selected page with selected number of elements and default sorting should be by price from lowest to highest. For example, if page=0&size=10, then you should return first 10 elements from database, sorted by price from lowest to highest.
+     -  GET ```/cryptocurrencies?name=[currency_name]&page=[page_number]&size=[page_size]``` - should return a selected [page](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Page.html) with selected number of elements and default sorting should be by price from lowest to highest. For example, if page=0&size=10, then you should return first 10 elements from database, sorted by price from lowest to highest.
 ```[page_number]``` and ```[page_size]``` request parameters should be optional, so if they are missing then you should set them default values ```page=0, size=10```.
-3. Generate a CSV report.\
+3. * Generate a CSV report (Optional).\
   You need to create an endpoint that will generate a CSV report saved into file.
 	- GET ```/cryptocurrencies/csv```
 	Report should contain the following fields: Cryptocurrency Name, Min Price, Max Price. So there should be only three records in that report, because we have three different cryptocurrencies. Feel free to use any available library for generating csv files.
@@ -43,11 +43,10 @@ Technical task itself consists of three main parts:
  2. Quality and style of the code
  3. Ability to learn fast new technologies
  4. Nice to have: all possible exception situations are handled properly
- 5. Try to cover your code with Unit tests(Optional)
 
 ## 🏁 Finishing the task
 After everything is done, please commit and send a link to your GitHub repository to HR.
 
 ## 📑 Contributing
 
-If you notice any mistake or have an idea of improving the test task, please feel free to contact ostap.storoshchuk@oril.co for an immediate response 🙌.
+If you notice any mistake or have an idea of improving the test task, please feel free to contact ostap.storoshchuk@oril.co or vyacheslav.perfilyev@oril.co for an immediate response 🙌.
